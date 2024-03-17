@@ -80,13 +80,11 @@ def upload_file():
         predicted_classes = []
         saved_file_paths = []
 
-        # Data preprocessing
+               # Data preprocessing
         data_transform = transforms.Compose([
-            transforms.Resize(224),
-            transforms.CenterCrop(224),
+            transforms.Resize((224, 224)),
             transforms.ToTensor(),
         ])
-
         for i, file in enumerate(files):
             if file and allowed_file(file.filename):
                 file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
