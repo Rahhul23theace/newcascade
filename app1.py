@@ -155,9 +155,9 @@ def uploaded_file(filename):
 
 
 
-@app.route('/demmo')
+@app.route('/demo')
 def demo_images():
-    folder_names =  ['Optimal','Artefact','Wrong','Incorrect_gain', 'Incorrect_position']
+    folder_names =  ['Optimal']
     folder_images = {}
     
     for folder in folder_names:
